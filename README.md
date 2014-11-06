@@ -1,7 +1,8 @@
 Joe Loughry (joe.loughry@stx.ox.ac.uk)
 ===========
 
-This is a *template* for a new journal paper; copy it and extend it.
+This is a template for a new journal or conference paper; the idea is to
+copy this&mdash;ideally, automatically&mdash;and base the new paper off it.
 
 How to Create a New Git Repository
 ----------------------------------
@@ -11,18 +12,18 @@ How to Create a New Git Repository
 of respositories and click the green 'New' button.
     1. Think of a subdirectory name (*new_name*) and fill in the
 description.
-    1. Leave it set to 'public' and don't tick the 'README' box (those will
-be supplied from the template).
+    1. Leave it set to 'public' and don't tick the 'README' box (that and
+the LICENSE file will be supplied from the template).
     1. Click the 'Create repository' button.
 1. Next, on the local computer:
     1. `cd ~/thesis/github/`
     1. `git init new_name`
     1. `cd new_name`
-    1. `cp ../new_paper/* .` NOTE: do **not** use `cp -r` here.
+    1. `cp ../new_paper/* .` NOTE: do **not** use `cp -r` here, just `cp`
+    1. Edit `.git/config` and change the name of the new directory.
     1. `cp ../new_paper/.gitignore`
     1. Edit `.gitignore` and change the name of the PDF files.
-    1. Edit `.git/config` and change the name of the new directory.
-    1. Edit the `.git/description` file.
+    1. Put something reasonable in the `.git/description` file.
 	1. `git add .`
 	1. `git push origin master`
 
