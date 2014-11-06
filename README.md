@@ -19,11 +19,16 @@ the LICENSE file will be supplied from the template).
     1. `cd ~/thesis/github/`
     1. `git init new_name`
     1. `cd new_name`
-    1. `cp ../new_paper/* .` NOTE: do **not** use `cp -r` here, just `cp`
-    1. Edit `.git/config` and change the name of the new directory.
-    1. `cp ../new_paper/.gitignore`
+    1. `cp -r ../new_paper/* .`
+	1. `cp ../new_paper/.git/config ./.git/`
+    1. Edit `.git/config` and change the name of the new directory (one
+line).
+    1. `cp ../new_paper/.gitignore .`
     1. Edit `.gitignore` and change the name of the PDF files.
     1. Put something reasonable in the `.git/description` file.
+	1. Change the name of the target in `Makefile` to `new_name`.
+	1. `mv Journal_name_paper.tex new_name_paper.tex`
+	1. `mv Journal_name_slides.tex new_names_lides.tex`
 	1. `git add .`
 	1. `git push origin master`
 
