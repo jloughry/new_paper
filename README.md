@@ -30,10 +30,10 @@ line).
 match the name of the directory).
     1. `mv Journal_name_paper.tex new_name_paper.tex`
     1. `mv Journal_name_slides.tex new_name_slides.tex`
-    1. `make`
+    1. `make` (see if it works)
     1. `make allclean`
     1. Update the README file.
-    1. `make commit`
+    1. `make commit` (say 'initial commit')
 
 (I really ought to turn this into a Makefile and use `sed` to make the
 edits automatically.)
