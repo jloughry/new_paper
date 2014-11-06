@@ -24,16 +24,16 @@ the LICENSE file will be supplied from the template).
     1. Edit `.git/config` and change the name of the new directory (one
 line).
     1. `cp ../new_paper/.gitignore .`
-    1. Edit `.gitignore` and change the name of the PDF files.
+    1. Edit `.gitignore` and change the name of the PDF files (two lines).
     1. Put something reasonable in the `.git/description` file.
-    1. Change the name of the target in `Makefile` to `new_name`.
+    1. Change the name of the target in `Makefile` to `new_name` (it should
+match the name of the directory).
     1. `mv Journal_name_paper.tex new_name_paper.tex`
     1. `mv Journal_name_slides.tex new_name_slides.tex`
     1. `make`
     1. `make allclean`
     1. Update the README file.
-    1. `git commit`
-    1. `git push origin master`
+    1. `make commit`
 
 (I really ought to turn this into a Makefile and use `sed` to make the
 edits automatically.)
