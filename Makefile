@@ -75,10 +75,10 @@ wc:
 	wc -w $(abstract)
 
 clean::
-	rm -f $(temporary_files)
+	rm -vf $(temporary_files)
 
 allclean: clean
-	rm -f $(paper_pdf_file) $(paper_dvi_file) $(slides_pdf_file)
+	rm -vf $(paper_pdf_file) $(paper_dvi_file) $(slides_pdf_file)
 
 include common.mk
 
