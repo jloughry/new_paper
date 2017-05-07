@@ -39,10 +39,9 @@ $(paper_pdf_file): $(paper_sources) $(graphics_for_paper) Makefile
 	$(latex_cmd) $(paper_source)
 	bibtex $(paper_target)
 	if (grep "Warning" $(paper_target).blg > /dev/null ) then false; fi
-	while ( \
+	while grep "Rerun to get" $(paper_target).log ; do \
 		$(latex_cmd) $(paper_target) ; \
-		grep "Rerun to get" $(paper_target).log > /dev/null \
-	) do true ; done
+	done
 	chmod a-x,a+r $(paper_pdf_file)
 	@echo "Build `cat $(paper_counter_file)`"
 
