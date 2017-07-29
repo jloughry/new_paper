@@ -1,1 +1,1 @@
-add hyperref package and fix symlinks from old development system
+update file headers
