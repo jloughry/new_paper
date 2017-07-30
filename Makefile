@@ -47,10 +47,10 @@ $(paper_pdf_file): $(paper_sources) $(graphics_for_paper) Makefile
 
 $(slides_pdf_file): $(slides_sources) $(graphics_for_slides) Makefile
 	@echo $$(($$(cat $(slides_counter_file)) + 1)) > $(slides_counter_file)
-	while ( \
+	$(latex_cmd) $(slides_target)
+	while grep "Rerun to get" $(slides_target).log ; do \
 		$(latex_cmd) $(slides_target) ; \
-		grep "Rerun to get" $(slides_target).log > /dev/null \
-	) do true ; done
+	done
 	@echo "Build `cat $(slides_counter_file)`"
 	chmod a-x,a+r $(slides_pdf_file)
 

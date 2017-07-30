@@ -1,1 +1,1 @@
-update file headers
+better way to run LaTeX in Makefile
