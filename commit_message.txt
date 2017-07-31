@@ -1,1 +1,1 @@
-better way to run LaTeX in Makefile
+silence the while statement to minimise noise

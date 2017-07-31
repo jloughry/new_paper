@@ -39,7 +39,7 @@ $(paper_pdf_file): $(paper_sources) $(graphics_for_paper) Makefile
 	$(latex_cmd) $(paper_source)
 	bibtex $(paper_target)
 	if (grep "Warning" $(paper_target).blg > /dev/null ) then false; fi
-	while grep "Rerun to get" $(paper_target).log ; do \
+	@while grep "Rerun to get" $(paper_target).log ; do \
 		$(latex_cmd) $(paper_target) ; \
 	done
 	chmod a-x,a+r $(paper_pdf_file)
@@ -48,7 +48,7 @@ $(paper_pdf_file): $(paper_sources) $(graphics_for_paper) Makefile
 $(slides_pdf_file): $(slides_sources) $(graphics_for_slides) Makefile
 	@echo $$(($$(cat $(slides_counter_file)) + 1)) > $(slides_counter_file)
 	$(latex_cmd) $(slides_target)
-	while grep "Rerun to get" $(slides_target).log ; do \
+	@while grep "Rerun to get" $(slides_target).log ; do \
 		$(latex_cmd) $(slides_target) ; \
 	done
 	@echo "Build `cat $(slides_counter_file)`"
