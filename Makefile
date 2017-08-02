@@ -29,6 +29,11 @@ temporary_files = *.log *.aux *.out *.idx *.ilg *.bbl *.blg .pdf *.nav *.snm *.t
 
 all:: $(paper_pdf_file) $(slides_pdf_file)
 
+Makefile: common.mk
+
+common.mk:
+	ln -s ../Makefiles/common.mk
+
 graphics_for_paper = $(graphics_dir)/ox_brand_cmyk_pos.pdf
 
 graphics_for_slides = $(graphics_dir)/ox_brand_cmyk_pos.pdf

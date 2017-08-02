@@ -1,1 +1,1 @@
-silence the while statement to minimise noise
+in Makefile, link common.mk if needed
