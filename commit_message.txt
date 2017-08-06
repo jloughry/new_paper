@@ -1,1 +1,1 @@
-in Makefile, link common.mk if needed
+don't track commit_message.txt
