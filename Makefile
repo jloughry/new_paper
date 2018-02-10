@@ -1,4 +1,5 @@
-target = JournalName
+target := $(basename $(shell ls -b *paper.tex | head -1 \
+    | sed -e "/_paper.tex/s///"))
 
 paper_target = $(target)_paper
 slides_target = $(target)_slides
