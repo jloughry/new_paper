@@ -19,9 +19,10 @@ paper_pdf_file = $(paper_target).pdf
 paper_dvi_file = $(paper_target).dvi
 slides_pdf_file = $(slides_target).pdf
 
+title = title.tex
 abstract = abstract.tex
 
-paper_sources = $(paper_source) $(bibtex_file) $(abstract)
+paper_sources = $(paper_source) $(bibtex_file) $(abstract) $(title)
 slides_sources = $(slides_source)
 graphics_dir = ./graphics
 
