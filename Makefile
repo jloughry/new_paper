@@ -61,6 +61,9 @@ $(slides_pdf_file): $(slides_sources) $(graphics_for_slides) Makefile
 	@echo "Build `cat $(slides_counter_file)`"
 	chmod a-x,a+r $(slides_pdf_file)
 
+title:
+	$(editor) $(title)
+
 abstract:
 	$(editor) $(abstract)
 
