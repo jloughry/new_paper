@@ -1,4 +1,4 @@
-Joe Loughry (joe.loughry@stx.ox.ac.uk)
+Joe Loughry (joe.loughry@gmail.com)
 ===========
 
 This is a template for a new journal or conference paper; the idea is to
