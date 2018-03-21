@@ -17,17 +17,16 @@ the LICENSE file will be supplied from the template).
     1. Click the 'Create repository' button.
 1. Next, on the local computer:
     1. `cd ~/thesis/github/`
-    1. `git init new_name`
+    1. `mkdir new_name`
     1. `cd new_name`
+    1. `git init`
     1. `cp -r ../new_paper/* .`
-    1. `cp ../new_paper/.git/config ./.git/`
-    1. Edit `.git/config` and change the name of the new directory (one
-line).
+    1. Edit the `.git/config` file and copy the `[remote "origin"]` and
+`[branch "master"]` portions of the file from any convenient working respository.
+    1. *Be sure to change the name of the new directory (one line).*
     1. `cp ../new_paper/.gitignore .`
     1. Edit `.gitignore` and change the name of the PDF files (two lines).
     1. Put something reasonable in the `.git/description` file.
-    1. Change the name of the target in `Makefile` to `new_name` (it should
-match the name of the directory).
     1. `mv Journal_name_paper.tex new_name_paper.tex`
     1. `mv Journal_name_slides.tex new_name_slides.tex`
     1. `make` (see if it works)
